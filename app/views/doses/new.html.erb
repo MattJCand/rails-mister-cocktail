@@ -1,0 +1,16 @@
+<div class="navbar-wagon">
+  <!-- Logo -->
+  <%= link_to @cocktail.name, @cocktail, class: "btn btn-primary"%>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12" style="margin-top: 10%;">
+      <%= simple_form_for [@cocktail, @dose] do |f| %>
+      <%= f.association :ingredient, class: "custom-select" %>
+      <%= f.input :description, placeholder:"Mojito cocktail Cubain ..."%>
+      <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
