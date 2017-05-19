@@ -9,6 +9,22 @@
 
 <h2 style="text-align: center;"><%=@cocktail.name%></h2>
 
+<% if @cocktail.photo? %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="thumbnail">
+           <%= cl_image_tag @cocktail.photo.path, width: 300, height: 300, crop: :fill %>
+          <div class="caption text-center">
+            <p><%= @cocktail.name %></p>
+          </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+<% end %>
+
 <div class="container" style="margin-top: 5%;">
   <table class="table">
     <thead>
@@ -28,3 +44,5 @@
     </tbody>
   </table>
 </div>
+
+

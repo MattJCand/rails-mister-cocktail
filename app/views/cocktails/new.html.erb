@@ -8,6 +8,7 @@
     <div class="col-xs-12" style="margin-top: 10%;">
       <%= simple_form_for(@cocktail) do |f| %>
       <%= f.input :name, placeholder:"Mojito"%>
+      <%= f.input :photo, as: :attachinary %>
       <%= f.submit %>
       <% end %>
     </div>
